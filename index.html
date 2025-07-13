@@ -27,7 +27,11 @@
     body {
       font-family: 'Playfair Display', serif;
       color: var(--text-dark);
-      background: #fff;
+      background-color: #fff; /* fallback */
+      background-image: url('assets/albania.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover auto;       /* fill the viewport */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -35,6 +39,7 @@
     }
     .hero { text-align: center; }
     .logo-circle {
+      position: relative;           /* enable absolute children */
       width: 260px; height: 260px;
       background: var(--primary-yellow);
       border-radius: 50%;
@@ -59,6 +64,7 @@
       margin-top: 1.5rem;
     }
     .btn {
+      font-family: 'Pacifico', cursive;
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
