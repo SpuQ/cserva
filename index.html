@@ -29,7 +29,7 @@
       font-family: 'Playfair Display', serif;
       color: var(--text-dark);
       background-color: #fff; /* fallback */
-      background-image: url('assets/albania.svg');
+      /*background-image: url('assets/albania.svg');
       background-repeat: no-repeat;
       background-position: center right;
       background-size: 100vh auto;       /* fill the viewport */
@@ -40,22 +40,27 @@
       min-width: 100vw;
     }
     .hero { text-align: center; }
-    .logo-circle {
-      position: relative;           /* enable absolute children */
-      width: 260px; height: 260px;
-      background: var(--primary-yellow);
-      border-radius: 50%;
+    .logo-e-verdhe {
+      position: relative;
+      width: 50vh; height: 50vh;
+      background-image: url("assets/logo_512x512.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
       margin: 0 auto 1.5rem;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: top; 
+      justify-content: center;
+      text-align: left;
     }
     .logo-text { line-height: 1; }
     .logo-text .cleaning {
       font-family: 'Pacifico', cursive;
-      font-size: 2.5rem;
+      font-size: 2.6rem;
       display: block;
     }
     .logo-text .service {
-      font-size: 1.2rem;
+      font-size: 1.7rem;
       letter-spacing: 2px;
       text-transform: uppercase;
     }
@@ -75,7 +80,7 @@
       text-decoration: none;
       font-size: 1rem;
       padding: 0.75rem 1.25rem;
-      border-radius: 4px;
+      border-radius: 6px;
       transition: opacity 0.2s;
     }
     .btn:hover { opacity: 0.8; }
@@ -83,10 +88,10 @@
 </head>
 <body>
   <div class="hero">
-    <div class="logo-circle">
+    <div class="logo-e-verdhe">
       <div class="logo-text">
         <span class="cleaning">Cleaning</span>
-        <span class="service">Service</span>
+        <span class="service">Service Albania</span>
       </div>
     </div>
     <div class="btn-group">
