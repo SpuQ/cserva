@@ -1,69 +1,354 @@
-    :root {
-      --acs-primary-yellow: #FFEB3B;
-      --acs-primary-grey: #b1b09b;
-      --text-dark: #222;
-      --btn-bg: #000;
-      --btn-text: #fff;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Playfair Display', serif;
-      color: var(--text-dark);
-      background-color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      min-width: 100vw;
-    }
-    .hero { text-align: center; }
-    .logo-e-verdhe {
-      position: relative;
-      background-image: url("assets/logo_800x500.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      margin: 0 auto 1.5rem;
-      display: flex;
-      align-items: top; 
-      justify-content: center;
-      text-align: left;
-    }
-    .logo-text { line-height: 1; }
-    .logo-text .cleaning {
-      font-family: 'Pacifico', cursive;
-      font-size: 2.6rem;
-      display: block;
-    }
-    .logo-text .service {
-      font-size: 1.7rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-    .logo-text .subtext {
-      font-size: 0.9rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #b1b09b;
-    }
-    .btn-group {
-      display: flex;
-      gap: 0.5rem;
-      justify-content: center;
-      margin-top: 1.5rem;
-    }
-    .btn {
-      font-family: 'Pacifico', cursive;
-    }
+:root { 
+  --background-color: #ffffff;
+  --csa-dark-grey: #505050;
+  --csa-yellow: #f9fc0b;
+  --csa-primary-grey: #b1b09b;
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
 
-    /* Service List */
-    .servicelist {
-        list-style-type: none;
-    }
-    .servicelistitem {
-      font-family: 'Lato', cursive;
-    }
+body {
+  font-family: 'Lato', serif;
+  color: var(--csa-primary-grey);
+  background-color: var(--background-color);
+}
 
-    .servicelistitem small{
-        color: grey;       
-    }
+a {
+  color: var(--csa-yellow);
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--csa-yellow), transparent 25%);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--csa-dark-grey);
+  font-family: 'Lato', serif;
+}
+
+.header {
+  color: var(--csa-primary-grey);
+  background-color: var(--background-color);
+  padding: 12px 0;
+  transition: all 0.3s;
+}
+
+.footer {
+  color: var(--csa-dark-grey);
+  background-color: var(--background-color);
+  font-size: 14px;
+  text-align: center;
+  padding: 30px 0;
+  position: relative;
+}
+
+/*--------------------------------------------------------------
+# Global Page Titles & Breadcrumbs
+--------------------------------------------------------------*/
+.page-title {
+  color: var(--csa-primary-grey);
+  background-color: var(--background-color);
+  padding: 160px 0 80px 0;
+  text-align: center;
+  position: relative;
+}
+
+.page-title:before {
+  content: "";
+  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+  position: absolute;
+  inset: 0;
+}
+
+.page-title h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.page-title .breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.page-title .breadcrumbs ol li+li {
+  padding-left: 10px;
+}
+
+.page-title .breadcrumbs ol li+li::before {
+  content: "/";
+  display: inline-block;
+  padding-right: 10px;
+  color: color-mix(in srgb, var(--csa-primary-grey), transparent 50%);
+}
+
+/*--------------------------------------------------------------
+# Global Sections
+--------------------------------------------------------------*/
+section,
+.section {
+  color: var(--csa-primary-grey);
+  background-color: var(--background-color);
+  padding: 60px 0;
+  scroll-margin-top: 81px;
+  overflow: clip;
+}
+
+@media (max-width: 1199px) {
+
+  section,
+  .section {
+    scroll-margin-top: 66px;
+  }
+}
+
+/*
+ *  Section Titles
+ */
+.section-title {
+  text-align: center;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 34px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+/*
+ *  About Section
+ */
+.about .content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+.about .content ul i {
+  flex-shrink: 0;
+  font-size: 48px;
+  color: var(--csa-yellow);
+  margin-right: 20px;
+  line-height: 0;
+}
+
+.about .content ul h5 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.about .content ul p {
+  font-size: 15px;
+}
+
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+
+
+.about .social {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+}
+
+@media (max-width: 468px) {
+  .about .social {
+    justify-content: center;
+  }
+}
+
+  .about .social a {
+  background: color-mix(in srgb, var(--csa-primary-grey), transparent 94%);
+  transition: ease-in-out 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  width: 36px;
+  height: 36px;
+}
+
+  .about .social a i {
+  color: color-mix(in srgb, var(--csa-primary-grey), transparent 20%);
+  font-size: 16px;
+  margin: 0 2px;
+}
+
+  .about .social a:hover {
+  background: var(--csa-yellow);
+}
+
+  .about .social a:hover i {
+  color: var(--contrast-color);
+}
+
+  .about .social a+a {
+  margin-left: 8px;
+}
+
+/*
+ *  Services
+ */
+.services .service-item {
+  background-color: var(--surface-color);
+  padding: 50px 30px;
+  margin-top: 36px;
+  position: relative;
+  border: 1px solid var(--csa-primary-grey);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.services .service-item .icon {
+  background: var(--csa-yellow);
+  color: var(--contrast-color);
+  margin: 0;
+  width: 74px;
+  height: 74px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  position: absolute;
+  top: -37px;
+  left: calc(50% - 36px);
+  border: 2px solid var(--csa-primary-grey);
+}
+
+.services .service-item h3 {
+  font-weight: 800;
+  margin: 10px 0 15px 0;
+  font-size: 23px;
+  transition: ease-in-out 0.3s;
+}
+
+.services .service-item p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.services .service-item:hover {
+  background: var(--background-color);
+}
+
+.services .service-item:hover h3 {
+  color: var(--csa-yellow);
+}
+
+.services .service-item:hover .icon {
+  background: var(--surface-color);
+  border: 2px solid var(--csa-yellow);
+}
+
+.services .service-item:hover .icon i {
+  color: var(--csa-yellow);
+}
+
+/*
+ *  Team
+ */
+.team .team-member {
+  background-color: var(--surface-color);
+  box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.1);
+  position: relative;
+  border-radius: 20px;
+  border: 1px solid var(--csa-primary-grey);
+  transition: 0.5s;
+  padding: 30px;
+  height: 100%;
+}
+
+@media (max-width: 468px) {
+  .team .team-member {
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
+
+.team .team-member .pic {
+  overflow: hidden;
+  width: 150px;
+  border-radius: 50%;
+  border: 2px solid var(--csa-yellow);
+  flex-shrink: 0;
+}
+
+.team .team-member .member-info {
+  padding-left: 30px;
+}
+
+@media (max-width: 468px) {
+  .team .team-member .member-info {
+    padding: 30px 0 0 0;
+    text-align: center;
+  }
+}
+
+.team .team-member h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.team .team-member span {
+  display: block;
+  font-size: 15px;
+  padding-bottom: 10px;
+  position: relative;
+  font-weight: 500;
+}
+
+.team .team-member span::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 1px;
+  background: color-mix(in srgb, var(--csa-primary-grey), transparent 85%);
+  bottom: 0;
+  left: 0;
+}
+
+@media (max-width: 468px) {
+  .team .team-member span::after {
+    left: calc(50% - 25px);
+  }
+}
+
+.team .team-member p {
+  margin: 10px 0 0 0;
+  font-size: 14px;
+}
