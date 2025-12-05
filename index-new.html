@@ -987,5 +987,56 @@
       }, 5000);
     });
   </script>
+
+  <!-- Soap Bubbles Animation -->
+  <div class="bubbles-container" id="bubblesContainer">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
+
+  <!-- Bubble Toggle Button -->
+  <button class="bubble-toggle" id="bubbleToggle" aria-label="Toggle bubbles" title="Toggle bubbles">
+    🫧
+  </button>
+
+  <!-- Bubble Toggle Script -->
+  <script>
+    const bubbleToggle = document.getElementById('bubbleToggle');
+    const bubblesContainer = document.getElementById('bubblesContainer');
+    let bubblesEnabled = true;
+
+    // Check localStorage for saved preference
+    const savedPreference = localStorage.getItem('bubblesEnabled');
+    if (savedPreference !== null) {
+      bubblesEnabled = savedPreference === 'true';
+      if (!bubblesEnabled) {
+        bubblesContainer.classList.add('hidden');
+        bubbleToggle.classList.add('off');
+      }
+    }
+
+    bubbleToggle.addEventListener('click', () => {
+      bubblesEnabled = !bubblesEnabled;
+      
+      if (bubblesEnabled) {
+        bubblesContainer.classList.remove('hidden');
+        bubbleToggle.classList.remove('off');
+      } else {
+        bubblesContainer.classList.add('hidden');
+        bubbleToggle.classList.add('off');
+      }
+      
+      // Save preference to localStorage
+      localStorage.setItem('bubblesEnabled', bubblesEnabled);
+    });
+  </script>
 </body>
 </html>
