@@ -246,6 +246,72 @@ section,
   margin-bottom: 0;
 }
 
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.btn-hero {
+  display: inline-block;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.btn-hero .lang-en,
+.btn-hero .lang-sq {
+  display: inline;
+  color: inherit;
+  font-weight: inherit;
+}
+
+.btn-hero .lang-sq {
+  display: none;
+}
+
+.btn-hero.btn-primary {
+  background-color: var(--csa-yellow);
+  color: var(--csa-dark-grey);
+  border-color: var(--csa-yellow);
+}
+
+.btn-hero.btn-primary:hover {
+  background-color: transparent;
+  color: var(--csa-yellow);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(249, 252, 11, 0.3);
+}
+
+.btn-hero.btn-secondary {
+  background-color: transparent;
+  color: var(--csa-dark-grey);
+  border-color: var(--csa-dark-grey);
+}
+
+.btn-hero.btn-secondary:hover {
+  background-color: var(--csa-dark-grey);
+  color: var(--contrast-color);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(80, 80, 80, 0.3);
+}
+
+@media (max-width: 576px) {
+  .hero-buttons {
+    flex-direction: column;
+  }
+  
+  .btn-hero {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 
 .about .social {
   margin-top: 12px;
