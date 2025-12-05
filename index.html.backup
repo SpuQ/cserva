@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link rel="icon" href="assets/logo_512x512.png" sizes="32x32" type="image/png" />
+  <title>Cleaning Service Albania | Professional Home & Office Cleaning</title>
+  <meta name="description" content="Ofrojmë shërbime profesionale pastrimi në Shqipëri. Pastrim shtëpie, pastrim zyrash, pastrim pas ndërtimit cilësi, besueshmëri dhe çmime të drejta.">
+  <meta name="keywords" content="sherbime pastrimi, pastrim Shqipëri, pastrim Tirane, pastrim zyrash, pastrim shtëpie, kompani pastrimi, cleaning service Albania">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Pacifico&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome Free -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <!-- Custom CSS File -->
+  <link href="index.css" rel="stylesheet">
+</head>
+
+<body class="index-page">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="#about" class="logo d-flex align-items-center">
+        <img src="assets/logo_512x512.png" alt="Cleaning Service Albania Logo">
+        <span>Cleaning Service Albania</span>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#about">Home</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <p class="phone-number"><i class="fas fa-phone"></i> +355682204850</p>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Hero/About Section -->
+    <section id="about" class="about section">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6 position-relative align-items-center">
+            <img src="assets/logo_800x500.png" class="img-fluid flex-shrink-0" alt="Cleaning Service Albania Logo">
+            <!-- Social buttons -->
+            <div class="social">
+              <!-- Phone -->
+              <a href="tel:+355682204850" title="Call Us">
+                <i class="fas fa-phone"></i>
+              </a>
+              <!-- WhatsApp -->
+              <a href="https://wa.me/355682204850" target="_blank" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <!-- Instagram -->
+              <a href="https://www.instagram.com/sherbime.pastrimi.csa2021/" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <!-- Facebook -->
+              <a href="https://www.facebook.com/cs.albania21/" target="_blank">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    <!-- END About Section -->
+  </main>
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <p>Copyright 2025 Cleaning Service Albania, All Rights Reserved</p>
+    </div>
+  </footer>
+  <!-- Bootstrap Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>

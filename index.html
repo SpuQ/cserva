@@ -9,7 +9,7 @@
   <meta name="description" content="Ofrojmë shërbime profesionale pastrimi në Shqipëri. Pastrim shtëpie, pastrim zyrash, pastrim pas ndërtimit cilësi, besueshmëri dhe çmime të drejta.">
   <meta name="keywords" content="sherbime pastrimi, pastrim Shqipëri, pastrim Tirane, pastrim zyrash, pastrim shtëpie, kompani pastrimi, cleaning service Albania">
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Pacifico&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
   <!-- Font Awesome Free -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Bootstrap -->
@@ -21,51 +21,470 @@
 <body class="index-page">
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-      <p>+355682204850</p>
+      <a href="#about" class="logo d-flex align-items-center">
+        <img src="assets/logo_512x512.png" alt="Cleaning Service Albania Logo">
+        <span>Cleaning Service Albania</span>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#about">Home</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <p class="phone-number"><i class="fas fa-phone"></i> +355682204850</p>
     </div>
   </header>
 
   <main class="main">
-    <!-- About -->
+    <!-- Hero/About Section -->
     <section id="about" class="about section">
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-6 position-relative align-items-center">
-            <!-- E Verdhe -->
-            <img src="assets/logo_800x500.png" class="img-fluid flex-shrink-0" alt="">
+            <img src="assets/logo_800x500.png" class="img-fluid flex-shrink-0" alt="Cleaning Service Albania Logo">
             <!-- Social buttons -->
             <div class="social">
               <!-- Phone -->
-              <a href="tel:+355682204850">
+              <a href="tel:+355682204850" title="Call Us">
                 <i class="fas fa-phone"></i>
               </a>
               <!-- WhatsApp -->
-              <a href="https://wa.me/355682204850" target="_blank" >
+              <a href="https://wa.me/355682204850" target="_blank" title="WhatsApp">
                 <i class="fab fa-whatsapp"></i>
               </a>
               <!-- Instagram -->
-              <a href="https://www.instagram.com/sherbime.pastrimi.csa2021/" target="_blank">
+              <a href="https://www.instagram.com/sherbime.pastrimi.csa2021/" target="_blank" title="Instagram">
                 <i class="fab fa-instagram"></i>
               </a>
               <!-- Facebook -->
-              <a href="https://www.facebook.com/cs.albania21/" target="_blank">
+              <a href="https://www.facebook.com/cs.albania21/" target="_blank" title="Facebook">
                 <i class="fab fa-facebook"></i>
               </a>
             </div>
           </div>
+          <div class="col-lg-6 content order-lg-last">
+            <h3>
+              <span class="lang-en">Professional Cleaning Services in Albania</span>
+              <span class="lang-sq">Shërbime Profesionale Pastrimi në Shqipëri</span>
+            </h3>
+            <p>
+              <span class="lang-en">Welcome to Cleaning Service Albania - your trusted partner for professional cleaning solutions. With years of experience and a dedicated team, we deliver exceptional cleaning services for homes, offices, and commercial spaces across Albania.</span>
+              <span class="lang-sq">Mirë se vini në Cleaning Service Albania! Ne ofrojmë shërbime profesionale pastrimi me cilësi të lartë, besueshmëri dhe çmime konkurruese. Ekipi ynë i trajnuar është gati të kujdeset për hapësirat tuaja me përkushtim maksimal.</span>
+            </p>
+            <div class="hero-buttons">
+              <a href="#services" class="btn-hero btn-primary">
+                <span class="lang-en">Our Services</span>
+                <span class="lang-sq">Shërbimet Tona</span>
+              </a>
+              <a href="#contact" class="btn-hero btn-secondary">
+                <span class="lang-en">Contact Us</span>
+                <span class="lang-sq">Na Kontaktoni</span>
+              </a>
+            </div>
+          </div>
         </div>
-
       </div>
-
     </section>
-    <!-- END About Section -->
+    <!-- END Hero/About Section -->
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews section dark-bg">
+      <div class="container">
+        <div class="reviews-carousel">
+          <button class="carousel-btn carousel-btn-prev" onclick="moveCarousel(-1)">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          
+          <div class="carousel-track-container">
+            <div class="carousel-track" id="reviewsTrack">
+              <!-- Review 1 -->
+              <div class="carousel-slide">
+                <div class="review-item">
+                  <div class="review-header">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_74x24dp.png" alt="Google" class="google-logo">
+                  </div>
+                  <p class="review-text">"Excellent service! They cleaned our apartment after renovation and did an amazing job. Very professional and thorough."</p>
+                  <p class="reviewer-name">— Maria K.</p>
+                </div>
+              </div>
+
+              <!-- Review 2 -->
+              <div class="carousel-slide">
+                <div class="review-item">
+                  <div class="review-header">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_74x24dp.png" alt="Google" class="google-logo">
+                  </div>
+                  <p class="review-text">"Best cleaning service in Tirana! They are reliable, professional, and their prices are very fair. Highly recommend!"</p>
+                  <p class="reviewer-name">— Besnik M.</p>
+                </div>
+              </div>
+
+              <!-- Review 3 -->
+              <div class="carousel-slide">
+                <div class="review-item">
+                  <div class="review-header">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_74x24dp.png" alt="Google" class="google-logo">
+                  </div>
+                  <p class="review-text">"We use their service monthly for our office. Always on time, always professional. Great team!"</p>
+                  <p class="reviewer-name">— Elena S.</p>
+                </div>
+              </div>
+
+              <!-- Review 4 -->
+              <div class="carousel-slide">
+                <div class="review-item">
+                  <div class="review-header">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_74x24dp.png" alt="Google" class="google-logo">
+                  </div>
+                  <p class="review-text">"Perfect deep cleaning service! They pay attention to every detail. Our home has never been so clean!"</p>
+                  <p class="reviewer-name">— Ardian T.</p>
+                </div>
+              </div>
+
+              <!-- Review 5 -->
+              <div class="carousel-slide">
+                <div class="review-item">
+                  <div class="review-header">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_74x24dp.png" alt="Google" class="google-logo">
+                  </div>
+                  <p class="review-text">"Very satisfied with their post-construction cleaning. They removed all the dust and debris. Highly professional!"</p>
+                  <p class="reviewer-name">— Lindita P.</p>
+                </div>
+              </div>
+
+              <!-- Review 6 -->
+              <div class="carousel-slide">
+                <div class="review-item">
+                  <div class="review-header">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_74x24dp.png" alt="Google" class="google-logo">
+                  </div>
+                  <p class="review-text">"Great service, great prices, great people! They cleaned our carpets and sofas - look brand new now!"</p>
+                  <p class="reviewer-name">— Fatmir H.</p>
+                </div>
+              </div>
+              
+              <!-- View All Card -->
+              <div class="carousel-slide">
+                <div class="review-item review-cta">
+                  <div class="review-cta-content">
+                    <i class="fab fa-google" style="font-size: 48px; color: var(--csa-yellow); margin-bottom: 20px;"></i>
+                    <h4 style="color: var(--contrast-color); margin-bottom: 15px;">
+                      <span class="lang-en">Read More Reviews</span>
+                      <span class="lang-sq">Lexo Më Shumë Vlerësime</span>
+                    </h4>
+                    <a href="https://www.google.com/search?q=cleaning+service+albania" target="_blank" class="btn-view-reviews-card">
+                      <span class="lang-en">View All on Google</span>
+                      <span class="lang-sq">Shiko në Google</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <button class="carousel-btn carousel-btn-next" onclick="moveCarousel(1)">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- END Reviews Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section section-light-bg">
+      <div class="container section-title">
+        <h2>
+          <span class="lang-en">Our Cleaning Services</span>
+          <span class="lang-sq">Shërbimet Tona të Pastrimit</span>
+        </h2>
+        <p>
+          <span class="lang-en">From residential to commercial spaces, we offer comprehensive cleaning solutions tailored to your needs!</span>
+          <span class="lang-sq">Nga hapësira rezidenciale në komerciale, ofrojmë zgjidhje pastrimi të plota të përshtatura për nevojat tuaja!</span>
+        </p>
+      </div>
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Service Item 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fas fa-home"></i>
+              </div>
+              <h3>
+                <span class="lang-en">Home Deep Cleaning</span>
+                <span class="lang-sq">Pastrimi i Thellë i Shtëpisë</span>
+              </h3>
+              <p>
+                <span class="lang-en">Comprehensive deep cleaning for your home including all rooms, kitchen, bathrooms, and living spaces. We ensure every corner sparkles with cleanliness.</span>
+                <span class="lang-sq">Pastrim i plotë i thellë për shtëpinë tuaj duke përfshirë të gjitha dhomat, kuzhinën, banjoat dhe hapësirat e jetesës.</span>
+              </p>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <!-- Service Item 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fas fa-building"></i>
+              </div>
+              <h3>
+                <span class="lang-en">Office Cleaning</span>
+                <span class="lang-sq">Pastrimi i Zyrave</span>
+              </h3>
+              <p>
+                <span class="lang-en">Professional office cleaning services to maintain a healthy and productive work environment. Regular or one-time cleaning available.</span>
+                <span class="lang-sq">Shërbime profesionale pastrimi zyrash për të mbajtur një mjedis pune të shëndetshëm dhe produktiv.</span>
+              </p>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <!-- Service Item 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fas fa-hammer"></i>
+              </div>
+              <h3>
+                <span class="lang-en">Post-Construction Cleaning</span>
+                <span class="lang-sq">Pastrimi Pas Ndërtimit</span>
+              </h3>
+              <p>
+                <span class="lang-en">Specialized cleaning after construction or renovation projects. We remove all debris, dust, and make your space move-in ready.</span>
+                <span class="lang-sq">Pastrim i specializuar pas projekteve të ndërtimit ose rinovimit. Largojmë të gjitha mbeturinat dhe pluhurin.</span>
+              </p>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <!-- Service Item 4 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fas fa-window-maximize"></i>
+              </div>
+              <h3>
+                <span class="lang-en">Window Cleaning</span>
+                <span class="lang-sq">Pastrimi i Dritareve</span>
+              </h3>
+              <p>
+                <span class="lang-en">Crystal-clear window cleaning services for residential and commercial properties. Interior and exterior cleaning available.</span>
+                <span class="lang-sq">Shërbime pastrimi dritaresh për prona rezidenciale dhe komerciale. Pastrim i brendshëm dhe i jashtëm.</span>
+              </p>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <!-- Service Item 5 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fas fa-couch"></i>
+              </div>
+              <h3>
+                <span class="lang-en">Upholstery & Carpet Cleaning</span>
+                <span class="lang-sq">Pastrimi i Mobilieve dhe Tapeteve</span>
+              </h3>
+              <p>
+                <span class="lang-en">Deep cleaning for carpets, rugs, sofas, and all upholstered furniture using eco-friendly products and professional equipment.</span>
+                <span class="lang-sq">Pastrim i thellë për qilima, mbulesa, divane dhe të gjitha mobiljet me produkte ekologjike dhe pajisje profesionale.</span>
+              </p>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <!-- Service Item 6 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fas fa-broom"></i>
+              </div>
+              <h3>
+                <span class="lang-en">Move In/Out Cleaning</span>
+                <span class="lang-sq">Pastrimi Para/Pas Shpërnguljes</span>
+              </h3>
+              <p>
+                <span class="lang-en">Complete cleaning service for moving in or out of a property. Ensure you leave or enter a spotless space.</span>
+                <span class="lang-sq">Shërbim i plotë pastrimi për shpërngulje. Sigurohuni që të largoheni ose të hyni në një hapësirë të pastër.</span>
+              </p>
+            </div>
+          </div>
+          <!-- End Service Item -->
+        </div>
+      </div>
+    </section>
+    <!-- END Services Section -->
+
+    <!-- Contact/CTA Section -->
+    <section id="contact" class="about section">
+      <div class="container">
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-6 order-1 order-lg-2">
+            <img src="assets/toy.png" class="img-fluid" alt="Cleaning Service Albania">
+          </div>
+          <div class="col-lg-6 content order-2 order-lg-1">
+            <h2>
+              <span class="lang-en">Get in Touch</span>
+              <span class="lang-sq">Kontaktoni</span>
+            </h2>
+            <p>
+              <span class="lang-en">Ready for a spotless space? Contact us today for a free quote!</span>
+              <span class="lang-sq">Gati për një hapësirë të pastër? Na kontaktoni sot për një ofertë falas!</span>
+            </p>
+            <div class="social">
+              <!-- Phone -->
+              <a href="tel:+355682204850" title="Call Us">
+                <i class="fas fa-phone"></i>
+              </a>
+              <!-- WhatsApp -->
+              <a href="https://wa.me/355682204850" target="_blank" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <!-- Instagram -->
+              <a href="https://www.instagram.com/sherbime.pastrimi.csa2021/" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <!-- Facebook -->
+              <a href="https://www.facebook.com/cs.albania21/" target="_blank" title="Facebook">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </div>
+            <div class="mt-4">
+              <h4>+355 68 220 4850</h4>
+              <p>
+                <span class="lang-en">Available 7 days a week</span>
+                <span class="lang-sq">Disponibël 7 ditë në javë</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END Contact Section -->
+
   </main>
+
   <footer id="footer" class="footer dark-background">
     <div class="container">
       <p>Copyright 2025 Cleaning Service Albania, All Rights Reserved</p>
     </div>
   </footer>
+
   <!-- Bootstrap Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  
+  <!-- Reviews Carousel Script -->
+  <script>
+    let currentIndex = 0;
+    const track = document.getElementById('reviewsTrack');
+    const slides = document.querySelectorAll('.carousel-slide');
+    
+    // Determine slides per view based on screen width
+    function getSlidesPerView() {
+      if (window.innerWidth <= 576) return 1;
+      if (window.innerWidth <= 991) return 2;
+      return 3;
+    }
+    
+    // Calculate total pages
+    function getTotalPages() {
+      return Math.ceil(slides.length / getSlidesPerView());
+    }
+    
+    // Move carousel
+    function moveCarousel(direction) {
+      const totalPages = getTotalPages();
+      currentIndex += direction;
+      
+      if (currentIndex < 0) {
+        currentIndex = totalPages - 1;
+      } else if (currentIndex >= totalPages) {
+        currentIndex = 0;
+      }
+      
+      updateCarousel();
+    }
+    
+    // Update carousel position
+    function updateCarousel() {
+      const slidesPerView = getSlidesPerView();
+      const containerWidth = track.parentElement.offsetWidth;
+      const offset = currentIndex * containerWidth;
+      
+      track.style.transform = `translateX(-${offset}px)`;
+    }
+    
+    // Handle window resize
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        currentIndex = 0;
+        updateCarousel();
+      }, 250);
+    });
+    
+    // Auto-play carousel
+    let autoplayInterval = setInterval(() => {
+      moveCarousel(1);
+    }, 5000);
+    
+    // Pause autoplay on hover
+    const carousel = document.querySelector('.reviews-carousel');
+    carousel.addEventListener('mouseenter', () => {
+      clearInterval(autoplayInterval);
+    });
+    
+    carousel.addEventListener('mouseleave', () => {
+      autoplayInterval = setInterval(() => {
+        moveCarousel(1);
+      }, 5000);
+    });
+  </script>
 </body>
 </html>
